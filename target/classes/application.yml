@@ -1,0 +1,18 @@
+eureka:
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  instance:
+    secure-port-enabled: true
+    non-secure-port-enabled: false
+server:
+    port: 8761
+    ssl:
+      enabled: true
+      key-alias: relevebancaire
+      key-store: classpath:relevebancaire-keystore.p12
+      key-store-password: secret
+      key-store-type: PKCS12
+spring:
+    application:
+        name: netflix-eureka
