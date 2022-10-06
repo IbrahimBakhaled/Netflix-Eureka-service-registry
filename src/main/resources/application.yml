@@ -2,7 +2,10 @@ eureka:
   client:
     fetch-registry: false
     register-with-eureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}
   instance:
+    hostname: "${HOSTNAME}.eureka"
     secure-port-enabled: true
     non-secure-port-enabled: false
 server:
